@@ -165,7 +165,7 @@ $files = mysqli_fetch_all($data, MYSQLI_ASSOC);
                                 <a href="download.php?file_id=<?php echo $file["id"];?>" style="text-decoration: none;"><i style="margin-right: 0.8rem;" class="fa fa-download" aria-hidden="true"></i>download</a>
                             </td>
                             <td>
-                                <a href="#" style="text-decoration: none;"><i style="margin-right: 0.8rem; color: red" class="fa fa-trash" aria-hidden="true"></i>delete</a>
+                                <a href="delete.php?file_id=<?php echo $file["id"];?>" style="text-decoration: none;"><i style="margin-right: 0.8rem; color: red" class="fa fa-trash" aria-hidden="true"></i>delete</a>
                             </td>
                         </tr>
 

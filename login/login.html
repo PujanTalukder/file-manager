@@ -1,0 +1,36 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File-Manager</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="wrapper">
+        <h1>Log in</h1>
+        <p>enter your credentials to login</p>
+        <form action="authenticate.php" method="POST">
+          <input type="text" name="username" placeholder="Enter username" />
+          <input type="password" name="password" placeholder="Password" />
+          <input type="submit" name="submit" id="login-btn" value="Log in" />
+        </form>
+        <div class="signup-container">
+          <p>
+            don't have an account?
+            <a
+              style="
+                text-decoration: none;
+                color: rgba(25, 25, 25, 0.803);
+                font-weight: bold;
+              "
+              href="../signup/signup.html"
+              >Sign up</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

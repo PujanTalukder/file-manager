@@ -22,7 +22,9 @@
     if(isset($_POST["upload"])){
         // get file info using $_FILE super globals
         $file_name = $_FILES["fileToUP"]["name"];
-        $file_size = $_FILES["fileToUP"]["size"];
+        $size = $_FILES["fileToUP"]["size"];
+
+        $file_size = humanReadableFileSize($size);
 
         $file = $_FILES["fileToUP"]["tmp_name"];
 
@@ -44,5 +46,18 @@
         }
     }
 
+
+?>
+
+<?php
+
+    function humanReadableFileSize($size)
+    {
+        $size = (float) $size;
+        $units = array('B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB');
+        $power = ($size > 0) ? floor(log($size, 1024)) : 0;
+        $power = ($power > (count($units) - 1)) ? (count($units) - 1) : $power;
+        return sprintf('%s %s', round($size / pow(1024, $power), 2), $units[$power]);
+    };
 
 ?>

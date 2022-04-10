@@ -151,8 +151,8 @@ $files = mysqli_fetch_all($data, MYSQLI_ASSOC);
                     <tr>
                         <th scope="col">File Name</th>
                         <th scope="col">File Size</th>
-                        <th scope="col"></th>
-                        <th scope="col"></th>
+                        <th scope="col">Action</th>
+                        <th scope="col">Action</th>
                     </tr>
                 </thead>
                 <tbody>

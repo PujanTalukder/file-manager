@@ -153,6 +153,7 @@ $files = mysqli_fetch_all($data, MYSQLI_ASSOC);
                         <th scope="col">File Size</th>
                         <th scope="col">Action</th>
                         <th scope="col">Action</th>
+                        <th scope="col">Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -162,10 +163,13 @@ $files = mysqli_fetch_all($data, MYSQLI_ASSOC);
                             <td><?php echo $file["name"]; ?></td>
                             <td><?php echo $file["size"]; ?></td>
                             <td>
-                                <a href="download.php?file_id=<?php echo $file["id"];?>" style="text-decoration: none;"><i style="margin-right: 0.8rem;" class="fa fa-download" aria-hidden="true"></i>download</a>
+                                <a href="download.php?file_id=<?php echo $file["id"];?>" style="text-decoration: none;"><i style="margin-right: 0.6rem;" class="fa fa-download" aria-hidden="true"></i>download</a>
                             </td>
                             <td>
-                                <a href="delete.php?file_id=<?php echo $file["id"];?>" style="text-decoration: none;"><i style="margin-right: 0.8rem; color: red" class="fa fa-trash" aria-hidden="true"></i>delete</a>
+                                <a href="update.php?file_id=<?php echo $file["id"];?>" style="text-decoration: none;"><i style="margin-right: 0.6rem;" class="fas fa-edit" aria-hidden="true"></i>edit</a>
+                            </td>
+                            <td>
+                                <a href="delete.php?file_id=<?php echo $file["id"];?>" style="text-decoration: none;"><i style="margin-right: 0.6rem; color: red" class="fa fa-trash" aria-hidden="true"></i>delete</a>
                             </td>
                         </tr>
 
